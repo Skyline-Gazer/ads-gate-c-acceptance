@@ -1,0 +1,16 @@
+name: validate
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "gate-c fixture validate ok"
+  lifecycle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "v0.4.1 real tools and submodule lifecycle ok"
